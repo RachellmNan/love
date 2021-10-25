@@ -1,0 +1,91 @@
+.container .diary-box {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .diary-box .diary-item {
+  background-color: #fff;
+  padding: 32rpx 40rpx 50rpx 32rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .diary-box .diary-item .flex-top {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 50rpx;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-left image {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-right {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  padding-top: 24rpx;
+  flex: 1;
+  overflow: hidden;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-right .userinfo-box {
+  margin-bottom: 50rpx;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-right .userinfo-detail {
+  font-size: 22rpx;
+  color: #8B8682;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-right .userinfo-detail text {
+  margin-left: 10rpx;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-right .content-box {
+  font-size: 24rpx;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-right .content-box text {
+  display: inline-block;
+  margin-bottom: 40rpx;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-right .content-box .image-box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-right .content-box .image-box image {
+  width: 440rpx;
+  height: 310rpx;
+}
+
+.container .diary-box .diary-item .flex-top .flex-sub-right .content-box .image-box .image-muti {
+  width: 172rpx;
+  height: 172rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.container .diary-box .diary-item .flex-bottom {
+  padding: 0 50rpx;
+}
+
+.container .diary-box .diary-item .flex-bottom .operator-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .diary-box .diary-item .flex-bottom .operator-box m-icon {
+  margin-right: 20rpx;
+}
+
+.container .diary-box .diary-item .flex-bottom .operator-box .operator-item {
+  padding: 10rpx;
+}

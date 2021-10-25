@@ -1,0 +1,44 @@
+<view class="container">
+    <view class="diary-box">
+        <view class="diary-item" wx:for="{{[1,2,3,4]}}" wx:key="index">
+            <view class="flex-top">
+                <view class="flex-sub-left">
+                    <image src="/assets/imgs/diary.png" />
+                </view>
+                <view class="flex-sub-right">
+                    <view class="userinfo-box">
+                        <text class="nickname">影子</text>
+                        <view class="userinfo-detail">
+                            <m-icon name="nanxing"></m-icon>
+                            <text >浙江</text>
+                            <text class="date-tip">今天</text>
+                            <text class="time">21:47</text>
+                        </view>
+                    </view>
+                    <view class="content-box">
+                        <text class="content">一年一年,时间过的真快。几天前买的衬衫，今天一到就穿上了，刚好合身。顺便拍了一张，手机自带美颜，设置中改不了，于是就刚好调成黑白的了。</text>
+                        <view class="image-box">
+                            <image  src="/assets/imgs/diary.png"  bind:tap="scaleImg" data-img="/assets/imgs/diary.png"/>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="flex-bottom">
+                <view class="operator-box">
+                    <view class="operator-item" >
+                        <m-icon name="fenxiang"></m-icon>
+                        <text >晒图</text>
+                    </view>
+                    <view class="operator-item">
+                        <m-icon name="dianzan"></m-icon>
+                        <text >点赞</text>
+                    </view>
+                    <view class="operator-item" bind:tap="goDiaryDetail">
+                        <m-icon name="pinglun"></m-icon>
+                        <text >评论</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

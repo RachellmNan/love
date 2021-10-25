@@ -1,0 +1,22 @@
+<view class="container">
+    <view class="list-box">
+        <view class="box-item" wx:for="{{[1,2,3,4]}}" wx:key="index">
+            <image src="/assets/imgs/test.png" />
+            <view class="userinfo-box">
+                <view class="flex-top">
+                    <text class="nickname">长岛</text>
+                    <view class="count-summary">
+                        <m-icon name="essay" class="essay"></m-icon>
+                        <text class="text_count">50字</text>
+                    </view>
+                </view>
+                <view class="flex-bottom">
+                    <m-icon name="nvxing"></m-icon>
+                    <text class="address">广东 广东省</text>
+                    <text class="constellation">94年摩羯座</text>
+                    <text class="college">北京邮电大学</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

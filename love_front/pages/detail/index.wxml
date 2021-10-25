@@ -1,0 +1,7 @@
+<view class="container">
+    <swiper circular>
+        <swiper-item  wx:for="{{[1,2,3]}}" wx:key="index">
+            <image src="/assets/imgs/diary.png" />
+        </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,81 @@
+.container{
+    .diary-box{
+        background-color: #F5F5F5;
+        display: flex;
+        flex-direction: column;
+        .diary-item{
+            background-color: #fff;
+            padding: 32rpx 40rpx 50rpx 32rpx;
+            margin-bottom: 20rpx;
+            display: flex;
+            flex-direction: column;
+            .flex-top{
+                display: flex;
+                overflow: hidden;
+                margin-bottom: 50rpx;
+                .flex-sub-left{
+                    image{
+                        width: 88rpx;
+                        height: 88rpx;
+                        border-radius: 50%;
+                    }
+                }
+                .flex-sub-right{
+                    margin-left: 20rpx;
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 24rpx;
+                    flex: 1;
+                    overflow: hidden;
+                    .userinfo-box{
+                        margin-bottom: 50rpx;
+                    }
+                    .userinfo-detail{
+                        font-size: 22rpx;
+                        color: #8B8682;
+                        text{
+                            margin-left: 10rpx;
+                        }
+                    }
+                    .content-box{
+                        font-size: 24rpx;
+                        text{
+                            display: inline-block;
+                            margin-bottom: 40rpx;
+                        }
+                        .image-box{
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            image{
+                                width: 440rpx;
+                                height: 310rpx;
+                            }
+                            .image-muti{
+                                width: 172rpx;
+                                height: 172rpx;
+                                margin-right: 10rpx;
+                                margin-bottom: 10rpx;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            
+            .flex-bottom{
+                padding: 0 50rpx;
+                .operator-box{
+                    display: flex;
+                    justify-content: space-between;
+                    m-icon{
+                        margin-right: 20rpx;
+                    }
+                    .operator-item{
+                        padding: 10rpx;
+                    }
+                }
+            }
+        }
+    }
+}
