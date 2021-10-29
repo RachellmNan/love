@@ -1,0 +1,89 @@
+<view class="container">
+    <view class="diary-box">
+        <view class="circle-image">
+            <image src="/assets/imgs/test.png" />
+        </view>
+        <view class="content-box">
+            <text class="nickname">温小火🔥🔥🔥</text>
+            <view class="exter">
+                <m-icon name="nvxing"></m-icon>
+                <text >北京 10-25 22:37</text>
+            </view>
+            <view class="content">
+                <text class="content-detail">新年新气象，来年顶呱呱，恭喜发财，红包拿来，嘻嘻哈哈过大年</text>
+                <image src="/assets/imgs/test.png" />
+            </view>
+        </view>
+        <view class="operator">
+            <view class="operator-sub">
+                <m-icon name="fenxiang"></m-icon>
+                <text >晒图</text>
+            </view>
+            <view class="operator-sub">
+                <m-icon name="zhuanfa"></m-icon>
+                <text >分享</text>
+            </view>
+           
+        </view>
+    </view>
+    <view class="praise-box">
+        <view class="flex-top">
+            <text >赞（0）</text>
+            <m-icon name="dianzan" fontsize="40"></m-icon>
+        </view>
+        <view class="flex-bottom">
+            <scroll-view scroll-x style="width:100%">
+                <view class="image-list" >
+                    <view wx:for="{{[1,2,3,4,5]}}" wx:key="index">
+                        <image src="/assets/imgs/test.png"  />
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="commentlist-box">
+        <view class="flex-top">
+            <text >评论（3）</text>
+            <m-icon name="pinglun"></m-icon>
+        </view>
+        <view class="flex-bottom">
+            <view class="comment-item" >
+                <view class="comment-avatar">
+                    <image src="/assets/imgs/diary1.png" />
+                </view>
+                <view class="comment-content">
+                    <view class="descripte-box">
+                        <text class="person">:)</text>:
+                    </view>
+                    <view class="content">
+                        哈哈哈，大手大脚阿里是大舅
+                    </view>
+                </view>
+            </view>
+            <view class="comment-item" >
+                <view class="comment-avatar">
+                    <image src="/assets/imgs/test.png" />
+                </view>
+                <view class="comment-content">
+                    <view class="descripte-box">
+                        <text class="person">影子</text>
+                        回复
+                        <text class="person">:)</text>
+                        :
+                    </view>
+                    <view class="content">
+                        嘻嘻哈哈过大年，来年一定顶呱呱，生活美滋滋，美好一整年，哈哈哈哈，这就是爱，八百标兵奔北坡，萨达大厦里看见啊，安德森i离开金湾
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="comment-box">
+        <view class="input-box">
+            <input placeholder="请写下你的想法..." />
+        </view>
+        <view class="send-box">
+            <text >发送</text>
+        </view>
+    </view>
+</view>

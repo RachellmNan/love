@@ -1,7 +1,94 @@
 <view class="container">
-    <swiper circular>
+    <swiper circular class="swiper">
         <swiper-item  wx:for="{{[1,2,3]}}" wx:key="index">
             <image src="/assets/imgs/diary.png" />
         </swiper-item>
     </swiper>
+    <view class="tupian-tip">
+        <m-icon name="tupian" ></m-icon>
+        <text class="image-count">1/2</text>
+    </view>
+    <view class="userinfo-wrapper">
+        <view class="userinfo-box">
+            <text class="nickname">温小火🔥🔥🔥</text>
+            <view class="flex-item">
+                <m-icon name="nvxing"></m-icon>
+                <text >北京</text>
+                <text >91年白羊座</text>
+                <text >161cm</text>
+            </view>
+            <view class="flex-item">
+                <text >本科</text>
+                <text >黑龙江科技大学</text>
+            </view>
+        </view>
+        <view class="moment">
+            <text class="title">Ta的个人动态</text>
+            <view class="img-list">
+                <image src="/assets/imgs/test.png" />
+                <image src="/assets/imgs/test.png" />
+                <image src="/assets/imgs/test.png" />
+                <image src="/assets/imgs/test.png" />
+            </view>
+        </view>
+        <view class="introduce-box">
+            <text class="title">Ta的个人介绍</text>
+            <text class="title-detail">
+                每次在个人介绍的时候,大脑总会浮现:我是谁,我在哪,我为什么在这～(~▽~～)~为什,每次在个人介绍的时候,大脑总会浮现:我是谁,我在哪,我为什么在这～(~▽~～)~为什,每次在个人介绍的时候,大脑总会浮现:我是谁,我在哪,我为什么在这～(~▽~～)~为什,
+            </text>
+        </view>
+        <view class="keys">
+            <text class="title">Ta的关键词</text>
+            <view class="key-box">
+                <view class="key-item">
+                    <view class="image-wrapper">
+                        <image src="/assets/imgs/smell.png" />
+                    </view>
+                    <view class="key">
+                        <block wx:for="{{['可动可静','心底善良','人缘好','天生乐观','古怪精灵']}}" wx:key="index">
+                            <text >{{item}}</text>
+                        </block>
+                    </view>
+                </view>
+                <view class="key-item">
+                    <view class="image-wrapper">
+                        <image src="/assets/imgs/interest.png" />
+                    </view>
+                    <view class="key">
+                        <block wx:for="{{['羽毛球','户外','阅读','天生乐观','古怪精灵']}}" wx:key="index">
+                            <text >{{item}}</text>
+                        </block>
+                    </view>
+                </view>
+                <view class="key-item">
+                    <view class="image-wrapper">
+                        <image src="/assets/imgs/food.png" />
+                    </view>
+                    <view class="key">
+                        <block wx:for="{{['重庆火锅','烤串','提拉米苏','冰淇淋','椰子鸡','日式料理','韩国烤肉','意大利面','披萨','汉堡炸鸡']}}" wx:key="index">
+                            <text >{{item}}</text>
+                        </block>
+                    </view>
+                </view>
+                <view class="key-item">
+                    <view class="image-wrapper">
+                        <image src="/assets/imgs/travel.png" />
+                    </view>
+                    <view class="key">
+                        <block wx:for="{{['重庆','成都','韩国','泰国','哈尔滨']}}" wx:key="index">
+                            <text >{{item}}</text>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="operator-box">
+        <view class="chat box">
+            <text >发起聊天</text>
+        </view>
+        <view class="share box">
+            <text >分享桃花牌</text>
+        </view>
+    </view>
 </view>

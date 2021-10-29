@@ -4,7 +4,13 @@
         "pages/square/index",
         "pages/chat/index",
         "pages/my/index",
-        "pages/detail/index"
+        "pages/detail/index",
+        "pages/tip/index",
+        "pages/diary-list/index",
+        "pages/diary-detail/index",
+        "pages/test/index",
+        "pages/edit-userinfo/index",
+        "pages/select-tag/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -33,6 +39,12 @@
                 "text": "聊天",
                 "iconPath": "/assets/imgs/chat@dis.png",
                 "selectedIconPath": "/assets/imgs/chat.png"
+            },
+            {
+                "pagePath": "pages/tip/index",
+                "text": "消息",
+                "iconPath": "/assets/imgs/tip@dis.png",
+                "selectedIconPath": "/assets/imgs/tip.png"
             },
             {
                 "pagePath": "pages/my/index",

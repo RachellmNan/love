@@ -17,6 +17,7 @@ Component({
             value:32
         }
     },
+    externalClasses:['exter'],
 
     /**
      * 组件的初始数据

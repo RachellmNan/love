@@ -1,8 +1,171 @@
+page {
+  background-color: #fff;
+}
+
 .container swiper {
   height: 600rpx;
+  position: relative;
 }
 
 .container swiper image {
   width: 100%;
   height: 100%;
+}
+
+.container .tupian-tip {
+  position: absolute;
+  z-index: 10;
+  top: 520rpx;
+  left: 20rpx;
+  padding: 8rpx 10rpx;
+  opacity: .8;
+  border-radius: 10rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background-color: #4F4F4F;
+}
+
+.container .tupian-tip m-icon {
+  margin-right: 12rpx;
+}
+
+.container .tupian-tip .image-count {
+  font-size: 24rpx;
+}
+
+.container .userinfo-wrapper {
+  padding: 56rpx 36rpx;
+}
+
+.container .userinfo-wrapper .userinfo-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80rpx;
+}
+
+.container .userinfo-wrapper .userinfo-box .nickname {
+  font-size: 50rpx;
+  margin-bottom: 12rpx;
+}
+
+.container .userinfo-wrapper .userinfo-box .flex-item {
+  font-size: 28rpx;
+  color: #696969;
+  margin-bottom: 12rpx;
+}
+
+.container .userinfo-wrapper .userinfo-box .flex-item text {
+  margin-right: 20rpx;
+}
+
+.container .userinfo-wrapper .userinfo-box::after {
+  margin-top: 20rpx;
+  content: '';
+  display: inline-block;
+  width: 60rpx;
+  height: 6rpx;
+  background-color: #000;
+}
+
+.container .userinfo-wrapper .moment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #CFCFCF;
+  height: 120rpx;
+  font-size: 24rpx;
+  color: #696969;
+}
+
+.container .userinfo-wrapper .moment .img-list {
+  display: flex;
+}
+
+.container .userinfo-wrapper .moment image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+}
+
+.container .userinfo-wrapper .introduce-box {
+  margin-bottom: 60rpx;
+}
+
+.container .userinfo-wrapper .introduce-box .title {
+  display: flex;
+  height: 128rpx;
+  align-items: center;
+  font-size: 24rpx;
+  border-bottom: 2rpx solid #CFCFCF;
+  color: #696969;
+}
+
+.container .userinfo-wrapper .introduce-box .title-detail {
+  font-size: 26rpx;
+}
+
+.container .userinfo-wrapper .keys {
+  font-size: 24rpx;
+  color: #696969;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120rpx;
+}
+
+.container .userinfo-wrapper .keys .title {
+  line-height: 128rpx;
+  border-bottom: 2rpx solid #CFCFCF;
+}
+
+.container .userinfo-wrapper .keys .key-box .key-item {
+  display: flex;
+  margin-top: 40rpx;
+  color: #000;
+  font-size: 28rpx;
+}
+
+.container .userinfo-wrapper .keys .key-box .key-item .image-wrapper {
+  width: 100rpx !important;
+}
+
+.container .userinfo-wrapper .keys .key-box .key-item image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 60rpx;
+}
+
+.container .userinfo-wrapper .keys .key-box .key-item text {
+  display: inline-block;
+  margin-bottom: 20rpx;
+  margin-right: 24rpx;
+}
+
+.container .operator-box {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24rpx;
+  height: 116rpx;
+  box-shadow: 0 0 30rpx 4rpx #CFCFCF;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.container .operator-box .box {
+  width: 320rpx;
+  height: 80rpx;
+  background-color: #000;
+  color: #fff;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.container .operator-box .share {
+  color: #000;
+  border: 2rpx solid #000;
+  background-color: #fff;
 }

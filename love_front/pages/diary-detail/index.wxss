@@ -1,0 +1,199 @@
+.container .diary-box {
+  padding: 40rpx;
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.container .diary-box .circle-image {
+  margin-right: 24rpx;
+}
+
+.container .diary-box .circle-image image {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+}
+
+.container .diary-box .content-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .diary-box .content-box .exter {
+  font-size: 24rpx;
+  color: #828282;
+  margin-bottom: 40rpx;
+}
+
+.container .diary-box .content-box .content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80rpx;
+  font-size: 28rpx;
+}
+
+.container .diary-box .content-box .content .content-detail {
+  display: inline-block;
+  margin-bottom: 30rpx;
+}
+
+.container .diary-box .content-box .content image {
+  width: 500rpx;
+  height: 300rpx;
+}
+
+.container .diary-box .operator {
+  position: absolute;
+  right: 50rpx;
+  bottom: 30rpx;
+  font-size: 24rpx;
+  color: #828282;
+  display: flex;
+  align-items: center;
+}
+
+.container .diary-box .operator .operator-sub {
+  padding: 10rpx 20rpx;
+}
+
+.container .diary-box .operator text {
+  margin-left: 20rpx;
+}
+
+.container .praise-box {
+  background-color: #fff;
+  line-height: 90rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+
+.container .praise-box .flex-top {
+  display: flex;
+  padding: 0 40rpx;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #CFCFCF;
+}
+
+.container .praise-box .flex-top m-icon {
+  padding: 0 10rpx;
+}
+
+.container .praise-box .flex-bottom {
+  height: 120rpx;
+}
+
+.container .praise-box .flex-bottom scroll-view {
+  height: 100%;
+}
+
+.container .praise-box .flex-bottom .image-list {
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx;
+  height: 100%;
+}
+
+.container .praise-box .flex-bottom .image-list view {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 26rpx;
+}
+
+.container .praise-box .flex-bottom .image-list view image {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.container .commentlist-box {
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 160rpx;
+}
+
+.container .commentlist-box .flex-top {
+  line-height: 90rpx;
+  display: flex;
+  padding: 0 40rpx;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #CFCFCF;
+}
+
+.container .commentlist-box .flex-top m-icon {
+  padding: 0 10rpx;
+}
+
+.container .commentlist-box .flex-bottom {
+  padding: 40rpx;
+}
+
+.container .commentlist-box .flex-bottom .comment-item {
+  display: flex;
+  margin-bottom: 30rpx;
+}
+
+.container .commentlist-box .flex-bottom .comment-item .comment-avatar image {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+}
+
+.container .commentlist-box .flex-bottom .comment-item .comment-content {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  flex: 1;
+}
+
+.container .commentlist-box .flex-bottom .comment-item .comment-content .descripte-box {
+  float: left;
+  margin-right: 20rpx;
+}
+
+.container .commentlist-box .flex-bottom .comment-item .comment-content .descripte-box text {
+  margin-right: 6rpx;
+}
+
+.container .commentlist-box .flex-bottom .comment-item .comment-content .descripte-box .person {
+  color: #00BFFF;
+}
+
+.container .comment-box {
+  display: flex;
+  height: 108rpx;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 16rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 2rpx 20rpx 2rpx #B5B5B5;
+}
+
+.container .comment-box .input-box {
+  padding: 20rpx 12rpx;
+  width: 580rpx;
+  height: 70rpx;
+  border: 2rpx solid #000;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  margin-right: 16rpx;
+  box-sizing: border-box;
+}
+
+.container .comment-box .send-box {
+  width: 120rpx;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 74rpx;
+  border-radius: 10rpx;
+}

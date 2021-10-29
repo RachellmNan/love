@@ -1,27 +1,26 @@
 <view class="container">
-    <view class="user-box">
+    <view class="item remark">
         <view class="flex-left">
-            <image src="/assets/imgs/test.png" />
-            <text class="niclname">SummerJuice</text>
-        </view>
-        <view class="flex-right">
-            <text >编辑资料</text>
-            <m-icon name="arrow-right"></m-icon>
-        </view>
-    </view>
-     <view class="flex-box">
-        <view class="flex-left">
-            <m-icon name="dongtai"></m-icon>
-            <text >个人动态</text>
+            <m-icon name="pinglun"></m-icon>
+            <text >评论</text>
         </view>
         <view class="flex-right">
             <m-icon name="arrow-right"></m-icon>
         </view>
     </view>
-    <view class="flex-box">
+    <view class="item remark">
         <view class="flex-left">
-            <m-icon name="shezhi"></m-icon>
-            <text >设置</text>
+            <m-icon name="dianzan" fontsize="40"></m-icon>
+            <text >点赞</text>
+        </view>
+        <view class="flex-right">
+            <m-icon name="arrow-right"></m-icon>
+        </view>
+    </view>
+    <view class="item remark">
+        <view class="flex-left">
+            <m-icon name="aixin" fontsize="40"></m-icon>
+            <text >我的比心</text>
         </view>
         <view class="flex-right">
             <m-icon name="arrow-right"></m-icon>

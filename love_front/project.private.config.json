@@ -29,6 +29,42 @@
                     "pathName": "pages/detail/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "tip",
+                    "pathName": "pages/tip/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "my",
+                    "pathName": "pages/my/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "diary-list",
+                    "pathName": "pages/diary-list/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "diary-detail",
+                    "pathName": "pages/diary-detail/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "edit-userinfo",
+                    "pathName": "pages/edit-userinfo/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "select-tag",
+                    "pathName": "pages/select-tag/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }

@@ -1,0 +1,156 @@
+<view class="container">
+    <view class="image-box">
+        <view class="title-box">
+            <m-icon name="tupian" color="#63B8FF" fontsize="50"></m-icon>
+            <text >相册</text>
+            （*请您至少上传一张真人照片哦)
+        </view>
+        <view class="image-list">
+            <view class="flex-left">
+                <view >+</view>
+            </view>
+            <view class="flex-right">
+                <view >+</view>
+                <view >+</view>
+            </view>
+        </view>
+    </view>
+    <view class="basic-info">
+        <view class="title-box">
+            <text class="title">基本信息</text>
+            <view class="flex-right">
+                <text >点击修改基本信息</text>
+                <m-icon name="xiangxia"></m-icon>
+            </view>
+        </view>
+        <view class="info-box">
+            <view class="info-item">
+                <view class="flex-left">
+                    <image src="/assets/imgs/wode.png" mode="widthFix"/>
+                    <text >昵称</text>
+                </view>
+                <view class="flex-right">
+                    <input value="可乐冰冰" />
+                </view>
+            </view>
+            <view class="info-item">
+                <view class="flex-left">
+                    <image src="/assets/imgs/xingbie.png" mode="widthFix"/>
+                    <text >性别</text>
+                </view>
+                <view class="flex-right">
+                    <picker mode="selector" header-text="1123" range="{{pickerArray}}" value="0" bindchange="pickchange">{{pickerValue}}</picker>
+                </view>
+            </view>
+            <view class="info-item">
+                <view class="flex-left">
+                    <image src="/assets/imgs/weixin.png" mode="widthFix"/>
+                    <text >微信号</text>
+                </view>
+                <view class="flex-right">
+                    <input value="KissMe" />
+                </view>
+            </view>
+            <view class="info-item">
+                <view class="flex-left">
+                    <image src="/assets/imgs/shengrifei.png" mode="widthFix"/>
+                    <text >出生和星座</text>
+                </view>
+                <view class="flex-right">
+                    <text >出生</text> · <text >星座</text>
+                </view>
+            </view>
+            <view class="info-item">
+                <view class="flex-left">
+                    <image src="/assets/imgs/chizi.png" mode="widthFix"/>
+                    <text >身高</text>
+                </view>
+                <view class="flex-right">
+                    <input value="可乐冰冰" />
+                </view>
+            </view>
+            <view class="info-item">
+                <view class="flex-left">
+                    <image src="/assets/imgs/xuexiao.png" mode="widthFix"/>
+                    <text >毕业院校</text>
+                </view>
+                <view class="flex-right">
+                    <text >湖南大学</text> · <text >本科</text>
+                </view>
+            </view>
+            <view class="info-item">
+                <view class="flex-left">
+                    <image src="/assets/imgs/didian.png" mode="widthFix"/>
+                    <text >所在城市</text>
+                </view>
+                <view class="flex-right">
+                    <text >广东</text> <text >广州市</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="keys-wrapper">
+        <view class="keys">
+            <text class="title">关于我</text>
+            <view class="key-box">
+                <view class="key-item">
+                    <view class="image-wrapper">
+                        <image src="/assets/imgs/smell.png" />
+                    </view>
+                    <view class="key">
+                        <block wx:for="{{['可动可静','心底善良','人缘好','天生乐观','古怪精灵']}}" wx:key="index">
+                            <text >{{item}}</text>
+                        </block>
+                    </view>
+                    <m-icon name="arrow-right" bind:tap="goSelectTag"></m-icon>
+                </view>
+                <view class="key-item">
+                    <view class="image-wrapper">
+                        <image src="/assets/imgs/interest.png" />
+                    </view>
+                    <view class="key">
+                        <block wx:for="{{['羽毛球','户外','阅读','天生乐观','古怪精灵']}}" wx:key="index">
+                            <text >{{item}}</text>
+                        </block>
+                    </view>
+                    <m-icon name="arrow-right" bind:tap="goSelectTag"></m-icon>
+                </view>
+                <view class="key-item">
+                    <view class="image-wrapper">
+                        <image src="/assets/imgs/food.png" />
+                    </view>
+                    <view class="key">
+                        <block wx:for="{{['重庆火锅','烤串','提拉米苏','冰淇淋','椰子鸡','日式料理','韩国烤肉','意大利面','披萨','汉堡炸鸡']}}" wx:key="index">
+                            <text >{{item}}</text>
+                        </block>
+                    </view>
+                    <m-icon name="arrow-right" bind:tap="goSelectTag"></m-icon>
+                </view>
+                <view class="key-item">
+                    <view class="image-wrapper">
+                        <image src="/assets/imgs/travel.png" />
+                    </view>
+                    <view class="key">
+                        <block wx:for="{{['重庆','成都','韩国','泰国','哈尔滨']}}" wx:key="index">
+                            <text >{{item}}</text>
+                        </block>
+                    </view>
+                    <m-icon name="arrow-right" bind:tap="goSelectTag"></m-icon>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="introduce-box">
+        <view class="title-box">
+            <image src="/assets/imgs/paper.png" mode="widthFix"/>
+            <text >个人介绍</text>
+        </view>
+        <view class="introduce-detail">
+            <textarea placeholder-style="font-size:24rpx;color:#CFCFCF" placeholder="建议涉及但不限于一下内容 ———— 家乡和长居城市、简单的求学or工作经历，性格特点、兴趣爱好、特殊技能，对另一半的期待，据说写的详细走心的小伙伴都脱单了"></textarea>
+            <text class="tip">0/4000</text>
+        </view>
+    </view>
+    <view class="submit-box">
+        <text >完成</text>
+    </view>
+</view>

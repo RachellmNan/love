@@ -1,0 +1,86 @@
+page{
+    background-color: #fff;
+}
+.container{
+    .image-wall{
+        position: relative;
+        .bg-image{
+            height: 406rpx;
+            width: 100%;
+        }
+        .nickname{
+            position: absolute;
+            right: 196rpx;
+            bottom: 20rpx;
+            color: #fff;
+            font-size: 34rpx;
+        }
+        .circle-image{
+            position: absolute;
+            right: 32rpx;
+            bottom: 0;
+            height: 126rpx;
+            width: 126rpx;
+            border-radius: 50%;
+            border: 8rpx solid #fff;
+            transform: translateY(40%);
+        }
+    }
+    .list-box{
+        padding: 0 36rpx;
+        margin-top: 88rpx;
+        display: flex;
+        flex-direction: column;
+        .item-box{
+            display: flex;
+            .date{
+                min-width: 100rpx;
+                .day{
+                    
+                    font-size: 40rpx;
+                }
+            }
+            .diary-info-box{
+                margin-left: 36rpx;
+                display: flex;
+                flex-direction: column;
+                .diary-info{
+                    display: flex;
+                    overflow: hidden;
+                    margin-bottom: 60rpx;
+                    image{
+                        width: 156rpx;
+                        height: 156rpx;
+                        margin-right: 20rpx;
+                    }
+                    .content-box{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .cotent{
+                            font-size: 28rpx;
+                            text-overflow: ellipsis;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                        }
+                        .count{
+                            font-size: 24rpx;
+                            color: 	#4F4F4F;
+                        }
+                    }
+                    .pure-text{
+                        padding: 4rpx 8rpx;
+                        background-color: #E8E8E8;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                    }
+                }
+            }
+        }
+    }
+}

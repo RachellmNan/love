@@ -1,0 +1,18 @@
+.container .item {
+  margin: 14rpx 0;
+  height: 128rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 28rpx;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.container .item .flex-left {
+  padding: 6rpx;
+}
+
+.container .item text {
+  margin-left: 24rpx;
+  font-size: 28rpx;
+}

@@ -1,16 +1,41 @@
 @font-face {
     font-family: "iconfont"; /* Project id 2887442 */
-    src: url('//at.alicdn.com/t/font_2887442_l5bixnnzled.woff2?t=1635151300490') format('woff2'),
-         url('//at.alicdn.com/t/font_2887442_l5bixnnzled.woff?t=1635151300490') format('woff'),
-         url('//at.alicdn.com/t/font_2887442_l5bixnnzled.ttf?t=1635151300490') format('truetype');
-  }
+    src: url('//at.alicdn.com/t/font_2887442_ijgsrjvr9yp.woff2?t=1635473678163') format('woff2'),
+         url('//at.alicdn.com/t/font_2887442_ijgsrjvr9yp.woff?t=1635473678163') format('woff'),
+         url('//at.alicdn.com/t/font_2887442_ijgsrjvr9yp.ttf?t=1635473678163') format('truetype');
+  }  
   
   .iconfont {
     font-family: "iconfont" !important;
     font-size: 28rpx;
     font-style: normal;
+    color: #CDC9C9;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  .xiangxia:before {
+    content: "\e600";
+  }
+  
+  .xiangshang:before {
+    content: "\e604";
+  }
+
+  .zhuanfa:before {
+    content: "\e681";
+  }
+
+  .shezhi:before {
+    content: "\e610";
+  }
+
+  .arrow-right:before {
+    content: "\e665";
+  }
+  
+  .tupian:before {
+    content: "\e6b2";
   }
 
   .pinglun:before {
@@ -35,7 +60,6 @@
 
   .nvxing:before {
     content: "\e621";
-    color: #FF6EB4;
   }
 
   .essay:before {
@@ -82,7 +106,7 @@
     content: "\e631";
   }
   
-  .shequdongtai:before {
+  .dongtai:before {
     content: "\e603";
   }
   

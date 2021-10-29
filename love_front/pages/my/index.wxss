@@ -1,1 +1,56 @@
-/* pages/my/index.wxss */
+.container .user-box {
+  margin: 14rpx 0 28rpx;
+  background-color: #fff;
+  display: flex;
+  padding: 0 28rpx;
+  align-items: center;
+  justify-content: space-between;
+  height: 172rpx;
+}
+
+.container .user-box .flex-left {
+  display: flex;
+  align-items: center;
+  font-size: 38rpx;
+}
+
+.container .user-box .flex-left image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 36rpx;
+}
+
+.container .user-box .flex-right {
+  padding: 6rpx;
+  font-size: 20rpx;
+  color: #828282;
+  display: flex;
+  align-items: center;
+}
+
+.container .user-box .flex-right m-icon {
+  padding: 4rpx;
+}
+
+.container .flex-box {
+  display: flex;
+  padding: 0 28rpx;
+  justify-content: space-between;
+  align-items: center;
+  height: 132rpx;
+  background-color: #fff;
+  margin-bottom: 14rpx;
+}
+
+.container .flex-box .flex-left {
+  font-size: 26rpx;
+}
+
+.container .flex-box .flex-left m-icon {
+  margin-right: 16rpx;
+}
+
+.container .flex-box .flex-right {
+  padding: 8rpx;
+}

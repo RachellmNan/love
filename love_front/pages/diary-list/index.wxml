@@ -1,0 +1,28 @@
+<view class="container">
+    <view class="image-wall">
+        <image class="bg-image" src="/assets/imgs/test.png" />
+        <text class="nickname">温小火🔥🔥🔥</text>
+        <image class="circle-image" src="/assets/imgs/test.png"></image>
+    </view>
+    <view class="list-box">
+        <viewm class="item-box" >
+            <view class="date">
+                <text class="day">昨天</text>
+            </view>
+            <view class="diary-info-box">
+                <view class="diary-info" wx:for="{{[1,2]}}" wx:key="index">
+                    <view class="image">
+                        <image src="/assets/imgs/test.png" />
+                    </view>
+                    <view class="content-box">
+                        <text class="cotent">新年快乐，恭喜发财，怕啊媳妇，花花世界，甜甜喝茶,有一说一，有二说二</text>
+                        <text class="count">共1张</text>
+                    </view>
+                </view>
+                <view class="diary-info">
+                    <text class="pure-text">新年快乐，恭喜发财，怕啊媳妇，花花世界，甜甜喝茶,有一说一，有二说二</text>
+                </view>
+            </view>
+        </viewm>
+    </view>
+</view>
