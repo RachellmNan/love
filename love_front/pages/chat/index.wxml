@@ -1,3 +1,10 @@
 <view class="container">
-    this is chat
+    this is chat {{numA}}
+    <view style="display:flex">
+        <text wx:for="{{messageList}}" wx:key="index" style="display:inline">
+            {{item.payload.text}}
+        </text>
+    </view>
+
+    长度: {{messageList.length}}
 </view>

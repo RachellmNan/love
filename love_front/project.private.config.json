@@ -65,6 +65,12 @@
                     "pathName": "pages/select-tag/index",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "chat",
+                    "pathName": "pages/chat/index",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
