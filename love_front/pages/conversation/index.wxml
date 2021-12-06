@@ -1,0 +1,37 @@
+<view class="container">
+    <scroll-view upper-threshold="0" bindscrolltoupper="scrolltoupper" scroll-y style="height:{{scrollHeight}}rpx" scroll-with-animation  >
+        <view class="list-box">
+            <block wx:for="{{messageList}}" wx:key="index" >
+                <view class="me flex-box" wx:if="{{conversationID !== item.from}}" id="id{{index}}" >
+                    <text class="date">10月25日 下午3:12</text>
+                    <view class="message-box">
+                        <image src="/assets/imgs/test.png" />
+                        <text class="message"  wx:if="{{!item.payload.imageInfoArray}}">{{item.payload.text}}</text> 
+                        <image class="message-img"  wx:else src="{{item.payload.imageInfoArray[0].imageUrl}}" mode="widthFix" bind:tap="previewImg" data-url="{{item.payload.imageInfoArray[0].imageUrl}}"/>
+                    </view>
+                </view>
+                <view class="other flex-box"  wx:else id="id{{index}}">
+                    <text class="date">10月25日 下午3:12</text>
+                    <view class="message-box">
+                        <image src="/assets/imgs/test.png" />
+                        <text class="message" wx:if="{{!item.payload.imageInfoArray}}">{{item.payload.text}}</text>
+                        <image class="message-img" wx:else src="{{item.payload.imageInfoArray[0].imageUrl}}" mode="widthFix" bind:tap="previewImg" data-url="{{item.payload.imageInfoArray[0].imageUrl}}"/>
+                    </view>
+                </view>
+            </block>
+            
+        </view>
+    </scroll-view>
+    <view class="empty">
+        
+    </view>
+    <view class="operator-box">
+        <view class="flex-left">
+            <m-icon name="tupian" color="#4F4F4F" fontsize="60" bind:tap="choseImg"></m-icon>
+        </view>
+        <view class="flex-right">
+            <input placeholder="文明发言" type="text" value="{{inputValue}}" bindinput="onInput" cursor-spacing="10"/>
+            <text class="send" bind:tap="send">发送</text>
+        </view>
+    </view>
+</view>

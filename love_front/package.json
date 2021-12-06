@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "js-base64": "^3.7.2",
     "mobx-miniprogram": "^4.13.2",
     "mobx-miniprogram-bindings": "^2.1.4",
     "tim-upload-plugin": "^1.0.3",

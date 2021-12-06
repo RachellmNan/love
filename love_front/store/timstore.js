@@ -2,20 +2,68 @@ import { observable, action } from "mobx-miniprogram";
 import TIM from 'tim-wx-sdk';
 import { genTestUserSig } from "../utils/GenerateTestUserSig";
 const TimModel = require('../models/tim')
-
 const store = observable({
     sdkReady:false,
     messageList:[],
-
+    nextReqMessageID: '',
+    conversationList: [],
+    isCompleted: true,
     login: action(async function(){
         this._listener()
         TimModel.getInstance().login()
     }),
-    getMessageList: action( async function(){
-        let res = await TimModel.getInstance().getMessageList()
-        console.log(111,res)
-        this.messageList = res.data.messageList
-        console.log('getMessageList: ', res.data.messageList)
+    getMessageList: action( async function(option, down_refresh= false){
+        if(option.conversationID == TimModel.getInstance().conversationID){
+            console.log('option: ',option)
+            console.log(2222)
+            option.conversationID = 'C2C' + option.conversationID
+            
+            // 每次自己发消息，消息上屏
+            let res 
+            if(!down_refresh){
+                console.log(3)
+                res = await TimModel.getInstance().getMessageList(option)
+                this.messageList = this.messageList.concat(res.data.messageList[res.data.messageList.length-1])
+            }else{
+                // 下拉加载历史消息
+                console.log(4)
+                option.nextReqMessageID = this.nextReqMessageID
+                res = await TimModel.getInstance().getMessageList(option)
+                for(let i of this.messageList){
+                    res.data.messageList.push(i)
+                }
+                this.messageList = res.data.messageList
+                console.log('nextReqMessageId: ', this.nextReqMessageID)
+            }
+            this.nextReqMessageID = res.data.nextReqMessageID
+            this.isCompleted = res.data.isCompleted
+            // console.log('messageList: ',res)
+            // await this._setMessageRead()
+            // await this.getConversationList()
+        }else{
+            console.log(1111)
+            TimModel.getInstance().conversationID = option.conversationID
+            // this.messageList = TimModel.getInstance().messageList
+            // this.conversationID = option.conversationID
+            // this.messageList = []
+            this.isCompleted = true
+            // TimModel.getInstance().conversationID = option.conversationID
+            option.conversationID = 'C2C' + TimModel.getInstance().conversationID
+            console.log('option: ',option)
+            let res = await TimModel.getInstance().getMessageList(option)
+            console.log('首次加载: ',res)
+            this.messageList = res.data.messageList
+            this.nextReqMessageID = res.data.nextReqMessageID
+            this.isCompleted = res.data.isCompleted
+            console.log('messageList: ',res)
+            await this._setMessageRead()
+            // this.conversationList = await this.getConversationList()
+        }
+    }),
+
+    getConversationList: action(async function (){
+        this.conversationList = await TimModel.getInstance().getConversationList()
+        console.log('conversatilonList: ',this.conversationList[0])
     }),
 
     _listener(){
@@ -28,22 +76,28 @@ const store = observable({
         // tim.on(TIM.EVENT.NET_STATE_CHANGE, this._handleNetStateChange, this)
         // tim.on(TIM.EVENT.KICKED_OUT, this._handleKickedOut, this)
     },
-    _handleSdkReady(){
+    async _handleSdkReady(){
         this.sdkReady = true
-        let d = new Date().valueOf()
-        console.log('结束',d)
-        console.log(33333)
+        await this.getConversationList()
+        console.log('conversationList: ', this.conversationList)
     },
     _handleSdkNotReady(){
         console.log(2222)
         this.sdkReady = false
     },
-    _handleMessageReceived(event){
-        let message = event
-        console.log('message: ',message)
-        console.log('messageList: ',this.messageList)
-        // this.messageList.push(event.data[0])
-        this.messageList = this.messageList.concat(event.data[0])
+    async _handleMessageReceived(event){
+        console.log(2)
+        console.log('_handleMessageReceived: ',event)
+        console.log('message: ',event.data, this.conversationID)
+        if(TimModel.getInstance().conversationID){
+            let messageList =  event.data.filter(item=>item.from == TimModel.getInstance().conversationID)
+            console.log('messageList: ', messageList)
+            // this.messageList.push(event.data[0])
+            this.messageList = this.messageList.concat(messageList)
+            await this._setMessageRead()
+            return
+        } 
+        await this.getConversationList()
         console.log('event', this.messageList)
     },
     _handleError(){
@@ -54,6 +108,9 @@ const store = observable({
     },
     _handleNetStateChange(){
 
+    },
+    async _setMessageRead(){
+        await TimModel.getInstance().getSdkInstance().setMessageRead({conversationID:'C2C'+TimModel.getInstance().conversationID})
     }
 
 })

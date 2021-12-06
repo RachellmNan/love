@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+        "m-icon": "/components/icon/index"
+  },
+  "navigationBarTitleText": "聊天",
+  "enablePullDownRefresh": true
+}

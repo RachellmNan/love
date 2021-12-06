@@ -1,0 +1,149 @@
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.container .list-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 20rpx 0;
+  box-sizing: border-box;
+}
+
+.container .list-box .me {
+  align-items: flex-end;
+}
+
+.container .list-box .me .message-box {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container .list-box .me .message-box .message {
+  position: relative;
+}
+
+.container .list-box .me .message-box .message::after {
+  position: absolute;
+  right: -10rpx;
+  top: 10rpx;
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid #fff;
+  border-top: 10rpx solid transparent;
+  border-bottom: 10rpx solid transparent;
+}
+
+.container .list-box .me image {
+  margin-left: 20rpx;
+}
+
+.container .list-box .date {
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  color: #CFCFCF;
+}
+
+.container .list-box image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.container .list-box .message-img {
+  width: 360rpx;
+}
+
+.container .list-box .other image {
+  margin-right: 20rpx;
+}
+
+.container .list-box .flex-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30rpx;
+}
+
+.container .list-box .flex-box .date {
+  align-self: center;
+}
+
+.container .list-box .flex-box .message-box .message {
+  max-width: 70%;
+  background-color: #fff;
+  display: inline-block;
+  padding: 20rpx;
+}
+
+.container .list-box .other .message-box {
+  display: flex;
+}
+
+.container .list-box .other .message {
+  position: relative;
+}
+
+.container .list-box .other .message::after {
+  position: absolute;
+  left: -10rpx;
+  top: 10rpx;
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-right: 10rpx solid #fff;
+  border-top: 10rpx solid transparent;
+  border-bottom: 10rpx solid transparent;
+}
+
+.container .empty {
+  width: 100%;
+  height: 100rpx;
+}
+
+.container .operator-box {
+  position: fixed;
+  height: 100rpx;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  background-color: #E8E8E8;
+  box-sizing: border-box;
+}
+
+.container .operator-box .flex-left {
+  margin-right: 20rpx;
+}
+
+.container .operator-box .flex-right {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: centers;
+}
+
+.container .operator-box .flex-right .send {
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  background-color: #32CD32;
+  color: #fff;
+}
+
+.container .operator-box input {
+  background-color: #fff;
+  height: 60rpx;
+  width: 80%;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}

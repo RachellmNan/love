@@ -2,7 +2,7 @@
     "pages": [
         "pages/home/index",
         "pages/square/index",
-        "pages/chat/index",
+        "pages/conversation/index",
         "pages/my/index",
         "pages/detail/index",
         "pages/tip/index",
@@ -10,7 +10,8 @@
         "pages/diary-detail/index",
         "pages/test/index",
         "pages/edit-userinfo/index",
-        "pages/select-tag/index"
+        "pages/select-tag/index",
+        "pages/user-list/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -35,7 +36,7 @@
                 "selectedIconPath": "/assets/imgs/square.png"
             },
             {
-                "pagePath": "pages/chat/index",
+                "pagePath": "pages/user-list/index",
                 "text": "聊天",
                 "iconPath": "/assets/imgs/chat@dis.png",
                 "selectedIconPath": "/assets/imgs/chat.png"

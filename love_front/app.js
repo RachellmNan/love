@@ -1,20 +1,18 @@
 // app.js
-App({
-  onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+import { createStoreBindings } from "mobx-miniprogram-bindings";
+import store from "./store/timstore";
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-  },
-  globalData: {
-    userInfo: null,
-    tabBarId: 0
-  }
+App({
+    onLaunch() {
+        this.storeBindings = createStoreBindings(this, {
+            store,
+            actions: [ "login"],
+        })
+        this.login()
+        console.log('登录成功')
+    },
+    globalData: {
+        userInfo: null,
+        tabBarId: 0
+    }
 })

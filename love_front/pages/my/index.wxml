@@ -1,8 +1,16 @@
 <view class="container">
     <view class="user-box">
         <view class="flex-left">
-            <image src="/assets/imgs/test.png" />
-            <text class="niclname">SummerJuice</text>
+            <view class="avater-box">
+                <image src="/assets/imgs/test.png" wx:if="{{!isLogin}}"/>
+                <view class="unlogin" wx:else bind:tap="onLogin">
+                    <text >点击登录</text>
+                </view>
+            </view>
+            <view class="nick-box">
+                <text class="nickname" wx:if="{{!isLogin}}">SummerJuice</text>
+                <text class="nickname" wx:else>未登录</text>
+            </view>
         </view>
         <view class="flex-right">
             <text >编辑资料</text>
@@ -19,9 +27,27 @@
         </view>
     </view>
     <view class="flex-box">
-        <view class="flex-left">
+        <view class="flex-left" >
             <m-icon name="shezhi"></m-icon>
             <text >设置</text>
+        </view>
+        <view class="flex-right">
+            <m-icon name="arrow-right"></m-icon>
+        </view>
+    </view>
+    <view class="flex-box" bind:tap="onTest">
+        <view class="flex-left" >
+            <m-icon name="shezhi"></m-icon>
+            <text >验证令牌</text>
+        </view>
+        <view class="flex-right">
+            <m-icon name="arrow-right"></m-icon>
+        </view>
+    </view>
+    <view class="flex-box" bind:tap="onRefresh">
+        <view class="flex-left" >
+            <m-icon name="shezhi"></m-icon>
+            <text >颁发令牌</text>
         </view>
         <view class="flex-right">
             <m-icon name="arrow-right"></m-icon>

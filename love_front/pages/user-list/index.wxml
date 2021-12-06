@@ -1,0 +1,34 @@
+<view class="container">
+    <view class="no-user" wx:if="{{!conversationList.length}}">
+        <text >暂无会话，去发起聊天吧～～～</text>
+    </view>
+    <view class="hasuser" wx:else> 
+        <view class="user-list" wx:for="{{conversationList}}" wx:key="index">
+            <view class="user-item" bind:tap="goConversation" data-conversationID="{{item.userProfile.userID}}">
+                <view class="avater">
+                    <image src="{{item.userProfile.avatar}}" />
+                </view>
+                <view class="messsage-info">
+                    <view class="flex-left">
+                        <text class="nickname">{{item.userProfile.nick}}</text>
+                        <text class="message">{{item.lastMessage.messageForShow}}</text>
+                    </view>
+                    <view class="flex-right">
+                        <text class="date">{{util.transfrom(item.lastMessage.lastTime)}}</text>
+                        <text class="count" wx:if="{{item.unreadCount}}">{{item.unreadCount}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<wxs module="util">
+    function transfrom(str){
+        return (getDate(str)).toLocaleString().slice(0,9)
+    }
+
+    module.exports = {
+        transfrom: transfrom
+    }
+</wxs>

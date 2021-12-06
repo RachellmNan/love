@@ -11,11 +11,27 @@
             display: flex;
             align-items: center;
             font-size: 38rpx;
-            image{
-                width: 100rpx;
-                height: 100rpx;
-                border-radius: 50%;
-                margin-right: 36rpx;
+            .avater-box{
+                .unlogin{
+                    width: 120rpx;
+                    height: 120rpx;
+                    border-radius: 50%;
+                    font-size: 24rpx;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 0 20rpx 6rpx #CFCFCF;
+                }
+                image{
+                    width: 100rpx;
+                    height: 100rpx;
+                    border-radius: 50%;
+                    margin-right: 36rpx;
+                }
+            }
+            .nick-box{
+                margin-left: 20rpx;
+                font-size: 32rpx;
             }
         }
         .flex-right{

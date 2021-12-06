@@ -67,8 +67,14 @@
                     "scene": null
                 },
                 {
-                    "name": "chat",
-                    "pathName": "pages/chat/index",
+                    "name": "user-list",
+                    "pathName": "pages/user-list/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "conversation",
+                    "pathName": "pages/conversation/index",
                     "query": "",
                     "scene": null
                 }
