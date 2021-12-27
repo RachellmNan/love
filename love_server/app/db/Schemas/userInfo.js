@@ -9,6 +9,8 @@ const UserInfoSchema = mongoose.Schema({
     constellation: String,
     height: Number,
     nowCity: String,
+    province: String,
+    gender:Number,
     // 学校等级
     // 无 专科 本科 硕士 博士
     academic: Number,

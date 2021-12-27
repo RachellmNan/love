@@ -15,10 +15,10 @@ class Http{
                 data,
                 method
             })
-            console.log('res: ',res)
         } catch (error) {
             // 网络异常错误
-            _showError('00000')
+            _showError('10000')
+            console.log('error: ', error)
             throw error
         }
         if(res.statusCode.toString().startsWith('2')){
@@ -81,10 +81,8 @@ function _showError(errCode){
 }
 
 function _encode() {
-    console.log('调用_encode')
     let token = WxStorage.getItem('token')
     let secret = Base64.encode(token + ':')
-    console.log('encode_token: ', token,'Basic '+secret)
     return 'Basic ' + secret
 }
 

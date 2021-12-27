@@ -10,7 +10,6 @@ function  _promisic(fn) {
                     reject(err)
                 }
             })
-            console.log('params: ',params)
             fn(params)
         })
     }

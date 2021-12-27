@@ -1,22 +1,28 @@
 <view class="container">
-    <view class="list-box">
-        <view class="box-item" wx:for="{{[1,2,3,4]}}" wx:key="index">
-            <image src="/assets/imgs/test.png" />
-            <view class="userinfo-box">
-                <view class="flex-top">
-                    <text class="nickname">长岛</text>
-                    <view class="count-summary">
-                        <m-icon name="essay" class="essay"></m-icon>
-                        <text class="text_count">50字</text>
+    <!-- <scroll-view scroll-y bindscrolltoupper="onScrolltoupper" bindscrolltolower="onScrolltolower" lower-threshold="0"> -->
+        <view class="list-box">
+            <view class="box-item" wx:for="{{UserList}}" wx:key="index">
+                <image src="{{util.adjustNet(item.avater)}}" />
+                <view class="userinfo-box">
+                    <view class="flex-top">
+                        <text class="nickname">{{item.nickName}}</text>
+                        <view class="count-summary">
+                            <m-icon name="essay" class="essay"></m-icon>
+                            <text class="text_count">{{item.description.length}}字</text>
+                        </view>
                     </view>
-                </view>
-                <view class="flex-bottom">
-                    <m-icon name="nvxing"></m-icon>
-                    <text class="address">广东 广东省</text>
-                    <text class="constellation">94年摩羯座</text>
-                    <text class="college">北京邮电大学</text>
+                    <view class="flex-bottom">
+                        <m-icon wx:if="{{item.gender == 0}}" name="nvxing"></m-icon>
+                        <m-icon wx:else name="nanxing"></m-icon>
+                        <text class="address">{{item.province}} {{item.nowCity}}</text>
+                        <text class="constellation">{{util.formate(item.birthYear)}}年{{item.constellation}}</text>
+                        <text class="college">{{item.college}}</text>
+                    </view>
                 </view>
             </view>
         </view>
-    </view>
+    <!-- </scroll-view> -->
+    
 </view>
+
+<wxs module="util" src="/utils/support.wxs"></wxs>

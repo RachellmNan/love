@@ -60,6 +60,7 @@
 
   .nvxing:before {
     content: "\e621";
+    color: #FF69B4;
   }
 
   .essay:before {

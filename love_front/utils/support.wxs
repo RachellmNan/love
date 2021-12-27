@@ -1,0 +1,18 @@
+var testBaseUrl = 'http://172.16.0.145:3000'
+
+function formate(birthYear){
+    if(birthYear){
+        birthYear = birthYear.toString()
+        return birthYear.slice(2)
+    }
+}
+
+function adjustNet(host){
+    // return host
+    return host.replace('http://localhost:3000', testBaseUrl)
+}
+
+module.exports = {
+    formate: formate,
+    adjustNet: adjustNet
+}

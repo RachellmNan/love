@@ -6,6 +6,9 @@ Page({
     data:{
         isLogin: true 
     },
+    async onLoad(){
+        console.log('我的')
+    },
     async onLogin(){
         let res = await wx.login() 
         let code = res.code

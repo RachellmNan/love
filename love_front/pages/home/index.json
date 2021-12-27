@@ -1,5 +1,6 @@
 {
   "usingComponents": {
       "m-icon": "/components/icon/index"
-  }
+    },
+    "enablePullDownRefresh": true
 }
